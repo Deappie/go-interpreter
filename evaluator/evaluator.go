@@ -22,7 +22,7 @@ func Eval(node ast.Node) object.Object {
 		return Eval(node.Expression)
 
 	case *ast.BlockStatement:
-		return evalBlockStatements(node.Statements)
+		return evalBlockStatements(node)
 
 	case *ast.ReturnStatement:
 		val := Eval(node.ReturnValue)
