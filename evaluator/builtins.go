@@ -1,6 +1,6 @@
 package evaluator
 
-import "monkey/object"
+import "interpreter/object"
 
 var builtins = map[string]*object.Builtin{
 	"len": &object.Builtin{

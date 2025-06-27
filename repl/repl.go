@@ -4,10 +4,10 @@ import (
 	"bufio"
 	"fmt"
 	"io"
-	"monkey/evaluator"
-	"monkey/lexer"
-	"monkey/object"
-	"monkey/parser"
+	"interpreter/evaluator"
+	"interpreter/lexer"
+	"interpreter/object"
+	"interpreter/parser"
 )
 
 const PROMPT = ">> "

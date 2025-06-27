@@ -2,8 +2,8 @@ package evaluator
 
 import (
 	"fmt"
-	"monkey/ast"
-	"monkey/object"
+	"interpreter/ast"
+	"interpreter/object"
 )
 
 var (
@@ -297,7 +297,7 @@ func applyFunction(fn object.Object, args []object.Object) object.Object {
 		extendedEnv := extendFunctionEnv(fn, args)
 		evaluated := Eval(fn.Body, extendedEnv)
 		return unwrapReturnValue(evaluated)
-	
+
 	case *object.Builtin:
 		return fn.Fn(args...)
 
@@ -337,4 +337,3 @@ func evalStringInfixExpression(
 		return newError("unknown operator: %s %s %s", left.Type(), operator, right.Type())
 	}
 }
-
